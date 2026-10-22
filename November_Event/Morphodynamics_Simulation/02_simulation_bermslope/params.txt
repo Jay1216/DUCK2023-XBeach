@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% XBeach parameter settings input file                                     %%%
+%%%                                                                          %%%
+%%% date:     17-Feb-2019 19:58:56                                           %%%
+%%% function: xb_write_params                                                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Grid parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+depfile    = bed.dep
+posdwn     = 0
+nx         = 106
+ny         = 0
+alfa       = 0
+vardx      = 1
+xfile      = x.grd
+yfile      = y.grd
+xori       = 0
+yori       = 0
+thetamin   = -90
+thetamax   = 90
+dtheta     = 10
+
+%%% Physical processes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%morphology = 0
+morfac     = 10
+
+%%% Initial conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+tideloc    = 1
+zs0file    = tide.txt
+
+%%% Sediment %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+D50        = 0.0005
+
+bermslopetransport = 1
+bermslope  = 0.1
+bermslopefac = 30
+bermslopegamma = 0.7
+
+%%% Model time %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+tstop      = 432000
+tintg      = 3600
+
+%%% Wave boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+instat    = jons_table
+random    = 0
+
+%%% Wave-spectrum boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcfile    = jonswap.txt
+%%%rt        = 1800
+%%%dtbc      = 1
+
+%%% Output variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+outputformat = fortran
+
+nglobalvar = 9
+zb
+x
+y
+zs
+ue
+urms
+As
+Sk
+H
+
+nmeanvar   = 20
+zs
+u
+v
+H
+urms
+As
+Sk
+ue
+ve
+hh
+k
+Subg
+Susg
+Sutot
+hu
+ua
+Dc
+cctot
+dcsdx
+dcbdx
+
